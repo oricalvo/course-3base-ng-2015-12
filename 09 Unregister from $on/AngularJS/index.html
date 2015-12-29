@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="MyApp">
+<head>
+    <title></title>
+
+    <style>
+        [ng-cloak] {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button ng-click="showCtrl=!showCtrl">Toggle</button>
+    <div ng-if="showCtrl">
+        <div ng-controller="HomeCtrl">
+
+            <form name="form1"></form>
+
+            <div ng-controller="ChildCtrl" name="child1">
+
+            </div>
+
+            <h1>{{message}}</h1>
+
+            <button ng-click="disableNotification()">Disable Notification</button>
+        </div>
+    </div>
+
+    <script src="require.js"></script>
+    <script src="jquery.js"></script>
+    <script src="angular.js"></script>
+    <script src="app.js"></script>
+    <script src="SyncService.js"></script>
+    <script src="HomeCtrl.js"></script>
+</body>
+</html>

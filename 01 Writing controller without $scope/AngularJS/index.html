@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="MyApp">
+<head>
+    <title></title>
+
+    <style>
+        [ng-cloak] {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div ng-controller="HomeCtrl as ctrl">
+        <input ng-model="ctrl.name" />
+        <button ng-click="ctrl.add()">Add</button>
+
+        <ul>
+            <li ng-repeat="contact in ctrl.contacts">
+                <span>{{contact.name}}</span>
+            </li>
+        </ul>
+    </div>
+
+    <script src="angular.js"></script>
+    <script src="app.js"></script>
+    <script src="HomeCtrl.js"></script>
+</body>
+</html>
