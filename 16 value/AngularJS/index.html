@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="MyApp">
+<head>
+    <title></title>
+
+    <style>
+        form.ng-submitted input.ng-invalid {
+            border: solid 1px red;
+            outline: none;
+        }
+
+        input.ng-invalid.ng-dirty {
+            border: solid 1px red;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <div ng-controller="HomeCtrl">
+        <form name="form" novalidate>
+            <div>
+                <div>
+                    User Name:
+                </div>
+                <div>
+                    <input required ng-model="userName" name="userName" />
+                    <!--<span ng-if="getVS('userName')">Please specify a message</span>-->
+                    <span ng-if="vs.userName">Please specify a message</span>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    E-Mail:
+                </div>
+                <div>
+                    <input />
+                    <span ng-if="vs.userName">Please specify an email</span>
+                </div>
+            </div>
+
+            <div>
+                <button ng-click="save()">Save</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="require.js"></script>
+    <script src="jquery.js"></script>
+    <script src="angular.js"></script>
+    <script src="angular-sanitize.js"></script>
+    <script src="app.js"></script>
+    <script src="ContactService.js"></script>
+    <script src="HomeCtrl.js"></script>
+</body>
+</html>

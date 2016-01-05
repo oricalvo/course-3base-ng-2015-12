@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="MyApp">
+<head>
+    <title></title>
+
+    <link href="jquery-ui.css" rel="stylesheet" />
+</head>
+<body>
+    <div ng-controller="HomeCtrl">
+        <datepicker ng-model="birthday"></datepicker>
+
+        <button ng-click="log()">Log</button>
+        <button ng-click="change()">Change</button>
+    </div>
+
+    <script src="jquery.js"></script>
+    <script src="jquery-ui.js"></script>
+    <script src="angular.js"></script>
+    <script src="app.js"></script>
+    <script src="DatepickerDirective.js"></script>
+    <script src="HomeCtrl.js"></script>
+</body>
+</html>

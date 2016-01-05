@@ -1,0 +1,14 @@
+﻿<h1>{{title}}</h1>
+
+<a ui-sref=".mydetails">Goto My Details</a>
+
+<button ng-click="gotoAbout()">About</button>
+
+<ul>
+    <li ng-repeat="contact in contacts">
+        <span>{{contact.name}}</span>
+        <a ui-sref="contactEdit({id: contact.id})">Edit</a>
+    </li>
+</ul>
+
+<div ui-view></div>

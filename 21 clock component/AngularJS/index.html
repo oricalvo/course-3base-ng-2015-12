@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="MyApp">
+<head>
+    <title></title>
+
+    <link href="Clock.css" rel="stylesheet" />
+</head>
+<body>
+    <div ng-controller="HomeCtrl">
+        <input ng-model="format" />
+
+        <clock name="clock1" format="format" on-tick="tick(time)"></clock>
+        <button ng-click="clock1.stop()">Stop</button>
+        <button ng-click="clock1.start()">Start</button>
+
+        <clock name="clock2" format="format" on-tick="tick(time)"></clock>
+        <button ng-click="clock2.stop()">Stop</button>
+        <button ng-click="clock2.start()">Start</button>
+    </div>
+
+    <script src="jquery.js"></script>
+    <script src="angular.js"></script>
+    <script src="app.js"></script>
+    <script src="ClockComponent.js"></script>
+    <script src="HomeCtrl.js"></script>
+</body>
+</html>

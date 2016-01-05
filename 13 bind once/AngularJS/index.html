@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="MyApp">
+<head>
+    <title></title>
+
+    <style>
+        [ng-cloak] {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div ng-controller="HomeCtrl">
+        <ul>
+            <li ng-repeat="contact in ::contacts">
+                <span>{{::contact.name}}</span>
+            </li>
+        </ul>
+
+        <button ng-click="change($event)">Change</button>
+    </div>
+
+    <script src="require.js"></script>
+    <script src="jquery.js"></script>
+    <script src="angular.js"></script>
+    <script src="angular-sanitize.js"></script>
+    <script src="app.js"></script>
+    <script src="HomeCtrl.js"></script>
+</body>
+</html>
